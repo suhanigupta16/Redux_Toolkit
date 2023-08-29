@@ -1,0 +1,80 @@
+.formWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(#feaf00, #f8d442);
+
+  form {
+    border: 1px solid #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: #fff;
+    width: 475px;
+    height: 550px;
+
+    filter: drop-shadow(2px, 5px, 10px, #000000);
+  }
+  .header {
+    text-align: center;
+    h3 {
+      color: #000000;
+    }
+    p {
+      color: #6c6c6c;
+    }
+  }
+
+  .singleField {
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px;
+
+    label {
+      text-align: left;
+      display: block;
+      color: #5a5a5a;
+      font-size: 14px;
+      margin-bottom: 4px;
+      margin-top: 30px;
+    }
+    input {
+      width: 100%;
+      height: 44px;
+      border: 1px solid #e5e5e5;
+      padding: 15px;
+      border-radius: 4px;
+      color: #cdcdcd;
+    }
+  }
+  .btn {
+    width: 100%;
+    height: 44px;
+    border-radius: 4px;
+    background-color: #feaf00;
+    text-align: center;
+    padding-top: 10px;
+
+    button {
+      font-family: Montserrat;
+      font-size: 14px;
+      border: none;
+      background-color: #feaf00;
+
+      .link {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+  }
+  .pass {
+    font-family: Montserrat;
+    font-size: 14px;
+    color: #6c6c6c;
+    text-align: center;
+    padding-top: 20px;
+    span {
+      color: #feaf00;
+    }
+  }
+}

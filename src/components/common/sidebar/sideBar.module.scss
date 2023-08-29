@@ -1,0 +1,74 @@
+.sidebarWrapper {
+  background-color: #f2eae1;
+
+  width: 270px;
+  padding: 20px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+
+  .sidehead {
+    text-align: center;
+  }
+  .sideimg {
+    text-align: center;
+    font-style: Montserrat;
+    img {
+      border-radius: 50%;
+      margin-top: 24px;
+    }
+    h4 {
+      font-style: Montserrat;
+      font-weight: 700;
+      color: #000000;
+    }
+    span {
+      color: #feaf00;
+      font-weight: 500;
+      font-size: 14px;
+      //line-height: .5rem;
+      font-style: Montserrat;
+    }
+  }
+  .sidenavs {
+    margin-top: 40px;
+    ul {
+      margin-left: 25px;
+    }
+    li {
+      list-style: none;
+      margin-top: 20px;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        border-radius: 4px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        &.activeLink {
+          background-color: #feaf00;
+          color: #fff;
+        }
+      }
+      &:hover {
+        a {
+          background-color: #ffd16e;
+        }
+      }
+    }
+    .icon {
+      margin-right: 15px;
+      font-size: 1.1rem;
+    }
+    .log {
+      margin-top: 100%;
+      cursor: pointer;
+    }
+    .logout {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}

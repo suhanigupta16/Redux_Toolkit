@@ -1,0 +1,57 @@
+.contentWrapper {
+  display: flex;
+  margin-top: 1rem;
+  gap: 10px 0;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  .box_col {
+    min-width: 320px;
+    flex-basis: 25%;
+    padding: 0 15px;
+  }
+  .box {
+    background-color: #f0f9ff;
+    padding: 10px;
+    border-radius: 8px;
+    p {
+      color: #6c6c6c;
+    }
+  }
+  .student {
+    background-color: #f0f9ff;
+    svg {
+      color: #74c1ed;
+      font-size: 3rem;
+    }
+  }
+  .Course {
+    background-color: #fef6fb;
+    svg {
+      color: #ee95c5;
+
+      font-size: 3rem;
+    }
+  }
+  .payment {
+    background-color: #fefbec;
+    svg {
+      color: #f6c762;
+
+      font-size: 3rem;
+    }
+  }
+  .user {
+    background-image: linear-gradient(#feaf00, #f8d442);
+
+    svg {
+      color: #ffffff;
+
+      font-size: 3rem;
+    }
+  }
+  .number {
+    display: flex;
+    justify-content: flex-end;
+    color: #6c6c6c;
+  }
+}
