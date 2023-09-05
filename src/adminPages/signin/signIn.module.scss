@@ -4,7 +4,6 @@
   justify-content: center;
   min-height: 100vh;
   background-image: linear-gradient(#feaf00, #f8d442);
-
   form {
     border: 1px solid #ffffff;
     padding: 2rem;
@@ -12,7 +11,6 @@
     background-color: #fff;
     width: 475px;
     height: 550px;
-
     filter: drop-shadow(2px, 5px, 10px, #000000);
   }
   .header {
@@ -24,12 +22,10 @@
       color: #6c6c6c;
     }
   }
-
   .singleField {
     margin-bottom: 20px;
     border-radius: 4px;
     border: 1px;
-
     label {
       text-align: left;
       display: block;
@@ -54,13 +50,11 @@
     background-color: #feaf00;
     text-align: center;
     padding-top: 10px;
-
     button {
       font-family: Montserrat;
       font-size: 14px;
       border: none;
       background-color: #feaf00;
-
       .link {
         text-decoration: none;
         color: #ffffff;

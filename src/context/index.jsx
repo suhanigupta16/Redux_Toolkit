@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-//import { tableData } from "../dummyData";
 export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {

@@ -9,7 +9,6 @@
   align-items: start;
   justify-content: center;
   padding: 20px;
-
   .text {
     margin-left: 60px;
   }
@@ -22,7 +21,6 @@
     margin: auto;
     margin: 10px;
   }
-
   h1 {
     font-weight: 600;
     color: #f18930;
@@ -35,16 +33,13 @@
     font-size: 32px;
     margin: 10px;
   }
-
   .buttonLink {
     padding: 12px 10px;
     font-size: 18px;
     border-radius: 10px;
     color: white;
     background: #f18930;
-    //text-decoration: none;
     border: none;
     margin-left: 5px;
-    //margin-top: 20px;
   }
 }

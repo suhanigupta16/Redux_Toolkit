@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
-//import axios from "axios";
+import React, { Fragment, useEffect } from "react";
 import styles from "../products/product.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../store/cartSlice";
@@ -8,7 +7,6 @@ import { getProducts } from "../../store/productSlice";
 const Products = () => {
   const dispatch = useDispatch();
   const { data: products } = useSelector((state) => state.products);
-  // const [products, setProducts] = useState();
 
   const handleAdd = (val) => {
     dispatch(addItem(val));

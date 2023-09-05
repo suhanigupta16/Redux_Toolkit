@@ -1,23 +1,17 @@
-.imageWrapper{
+.imageWrapper {
   text-align: center;
-  .image{
-    
-    
-      
-   
-    img{
+  .image {
+    img {
       border-radius: 50%;
-      height:200px;
-      width:200px;
+      height: 200px;
+      width: 200px;
       margin-top: 5px;
-     
-     
     }
   }
-  p{
+  p {
     cursor: pointer;
   }
-  input{
+  input {
     display: none;
   }
 }
@@ -25,16 +19,11 @@
   border: 1px solid #ffffff;
   padding: 2rem;
   border-radius: 2rem;
-  //   width: 475px;
-  //   height: 550px;
   filter: drop-shadow(2px, 5px, 10px, #000000);
-  
-
   .singleField {
     margin-bottom: 10px;
     border-radius: 4px;
     border: 1px;
-
     label {
       text-align: left;
       display: block;

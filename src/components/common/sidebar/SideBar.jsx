@@ -1,7 +1,6 @@
 import React from "react";
-
 import styles from "./sideBar.module.scss";
-import profile from "./images/profile.jpg";
+import profile from "../../../assets/profile.jpg";
 import {
   HiOutlineHome,
   HiOutlineBookmark,
@@ -40,7 +39,6 @@ const SideBar = () => {
               Home
             </NavLink>
           </li>
-
           <li>
             <NavLink
               to="/course"
@@ -50,7 +48,6 @@ const SideBar = () => {
               Course
             </NavLink>
           </li>
-
           <li>
             <NavLink
               to="/student"

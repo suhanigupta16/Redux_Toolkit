@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import styles from "./student.module.scss";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsPencil } from "react-icons/bs";
@@ -12,8 +12,9 @@ const StudentContent = ({
   setUserToEdit,
   setEditMode,
 }) => {
+  const token = localStorage.getItem("token");
+  const baseUrl = process.env.REACT_APP_BASE_URL;
   const [data, setData] = useState([]);
-  console.log("🚀 ~ file: StudentContent.jsx:22 ~ data:", data);
 
   const handleAdd = () => {
     setUserToEdit(initialData);
@@ -28,10 +29,9 @@ const StudentContent = ({
     onDeleteUser(item);
   };
 
-  const token = localStorage.getItem("token");
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/users", {
+      .get(`${baseUrl}/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -79,7 +79,6 @@ const StudentContent = ({
                   <td>
                     <div className={styles.icon}>
                       <BsPencil onClick={() => handleEdit(item)} />
-
                       <AiOutlineDelete onClick={() => handleDelete(item)} />
                     </div>
                   </td>

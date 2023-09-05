@@ -15,14 +15,12 @@ const Cart = () => {
   const handleBack = () => {
     navigate("/web/Products");
   };
-
   const handleIncrement = (itemId) => {
     dispatch(incrementQuantity(itemId));
   };
   const handleDecrement = (itemId) => {
     dispatch(decrementQuantity(itemId));
   };
-
   const removeFromCart = (itemId) => {
     dispatch(remove(itemId));
   };
@@ -57,7 +55,6 @@ const Cart = () => {
                       <span>{item.title}</span>
                     </td>
                     <td>${item.price}</td>
-
                     <td>
                       <button
                         className={styles.btn}
@@ -90,9 +87,7 @@ const Cart = () => {
               <tr>
                 <td></td>
                 <td></td>
-
                 <td></td>
-
                 <td className={styles.total}>Total:</td>
                 <td className={styles.totalCheck}>${totalValue}</td>
               </tr>

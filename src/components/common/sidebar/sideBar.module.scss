@@ -1,15 +1,21 @@
 .sidebarWrapper {
   background-color: #f2eae1;
-
   width: 270px;
   padding: 20px;
   height: 100%;
   left: 0;
   top: 0;
   position: fixed;
-
+  display: flex;
+  flex-direction: column;
   .sidehead {
     text-align: center;
+    h3 {
+      font-size: 20px;
+      font-weight: bolder;
+
+      margin-top: 10px;
+    }
   }
   .sideimg {
     text-align: center;
@@ -20,14 +26,15 @@
     }
     h4 {
       font-style: Montserrat;
-      font-weight: 700;
+      font-weight: 500;
       color: #000000;
+      font-size: 18px;
+      margin-top: 10px;
     }
     span {
       color: #feaf00;
       font-weight: 500;
       font-size: 14px;
-      //line-height: .5rem;
       font-style: Montserrat;
     }
   }
@@ -35,11 +42,11 @@
     margin-top: 40px;
     ul {
       margin-left: 25px;
+      margin: 0px;
     }
     li {
       list-style: none;
       margin-top: 20px;
-
       a {
         color: inherit;
         text-decoration: none;

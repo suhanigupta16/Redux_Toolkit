@@ -11,19 +11,19 @@ const Student = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [userToEdit, setUserToEdit] = useState(initialData);
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+  const token = localStorage.getItem("token");
 
   const onEditUser = (item) => {
     setEditMode(true);
     setUserToEdit(item);
   };
 
-  const token = localStorage.getItem("token");
   const onDeleteUser = (item) => {
     const del = window.confirm("Are you sure you want to delete" + item.name);
     if (del) {
-      console.log(item);
       axios
-        .delete("https://dummyjson.com/users/1", {
+        .delete(`${baseUrl}/users/1`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -36,9 +36,7 @@ const Student = () => {
     }
   };
 
-  useEffect(() => {
-    console.log("userToEdit", userToEdit);
-  }, [userToEdit]);
+  useEffect(() => {}, [userToEdit]);
 
   return (
     <DashboardLayout>
@@ -54,7 +52,6 @@ const Student = () => {
           />
         </div>
       </div>
-
       <StudentContent
         setIsOpenModal={setIsOpenModal}
         onEditUser={onEditUser}

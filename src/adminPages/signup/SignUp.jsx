@@ -12,7 +12,6 @@ const SignUp = () => {
             <h4>SIGN UP</h4>
             <p>Enter Credentials to Register</p>
           </div>
-
           <div className={styles.singleField}>
             <label for="name">Name</label>
             <input
@@ -22,7 +21,6 @@ const SignUp = () => {
               placeholder="Enter your name"
             />
           </div>
-
           <div className={styles.singleField}>
             <label for="email">Email</label>
             <input
@@ -55,7 +53,6 @@ const SignUp = () => {
               <button type="submit">SIGN UP</button>
             </div>
           </Link>
-
           <div className={styles.pass}>
             <p>
               Already have an account ?

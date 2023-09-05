@@ -3,16 +3,11 @@ footer {
   padding-top: 50px;
   width: 100%;
   bottom: 0;
-  //position: fixed;
-  //height: 100vh;
   z-index: 3;
 }
 .footerWrapper {
-  //width:90%;
-  //margin: auto;
   display: flex;
   justify-content: center;
-
   h3 {
     font-size: 28px;
     margin-bottom: 15px;
@@ -31,7 +26,6 @@ footer {
   }
   .list {
     padding: 0;
-
     li {
       width: auto;
       text-align: center;
@@ -39,7 +33,6 @@ footer {
       padding: 7px;
       position: relative;
     }
-
     ::before {
       content: "";
       position: absolute;
@@ -55,7 +48,6 @@ footer {
   .socialIcons {
     text-align: center;
     padding: 0;
-
     li {
       display: inline-block;
       text-align: center;

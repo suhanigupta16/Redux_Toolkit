@@ -3,12 +3,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import styles from "../webNavBar/navBar.module.scss";
 import { BsCartPlus } from "react-icons/bs";
 import { useSelector } from "react-redux";
-//import { CartContext } from "../../../webPages/contextApi/CartContext";
 
 const NavBar = () => {
-  //const cartItems = useSelector(state=>state.qty.items)
-  //console.log(cartItems);
-
   const cartProduct = useSelector((state) => state.cart);
   const navigate = useNavigate();
   return (

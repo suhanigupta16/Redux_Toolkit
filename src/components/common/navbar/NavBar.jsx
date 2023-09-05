@@ -3,6 +3,7 @@ import styles from "./navBar.module.scss";
 import { TbCircleCaretLeft } from "react-icons/tb";
 import { BiBell } from "react-icons/bi";
 import { BsSearch } from "react-icons/bs";
+
 const NavBar = () => {
   return (
     <div className={styles.navWrapper}>

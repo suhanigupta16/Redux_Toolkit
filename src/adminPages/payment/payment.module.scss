@@ -3,7 +3,6 @@
   height: calc(100vh - 60px);
   overflow-y: auto;
   padding: 10px;
-
   h3 {
     padding-left: 20px;
     padding-top: 5px;
@@ -13,17 +12,14 @@
     width: 97%;
     color: #acacac;
   }
-
   .ptmDetails {
     display: flex;
     justify-content: center;
   }
-
   .table {
     padding: 10px 10px;
     border-spacing: unset;
     width: 90%;
-
     thead {
       th {
         padding: 0.5rem 0.5rem 1rem;
@@ -45,7 +41,6 @@
       }
     }
   }
-
   .check {
     background-color: #fff;
     text-align: center;

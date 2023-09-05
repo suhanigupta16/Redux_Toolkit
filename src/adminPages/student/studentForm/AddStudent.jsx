@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./addStudent.module.scss";
 import axios from "axios";
 import { initialData } from "../../../dummyData";
-import gifImg from "./gif.png";
+import gifImg from "../../../assets/gif.png";
 import { ImageToBase64 } from "../../../utility/ImageToBase64";
 
 const AddStudent = ({
@@ -15,11 +15,9 @@ const AddStudent = ({
   editMode,
 }) => {
   const [values, setValues] = useState(initialData);
-  console.log("🚀 ~ file: AddStudent.jsx:20 ~ values:", values);
-  //const [data, setData] = useState();
+  const token = localStorage.getItem("token");
 
   const handleOnChange = (e) => {
-    console.log(e.target.value);
     setValues({
       ...values,
       [e.target.name]: e.target.value,
@@ -28,21 +26,18 @@ const AddStudent = ({
 
   const handleUploadProfileImage = async (e) => {
     const data = await ImageToBase64(e.target.files[0]);
-    console.log(data);
-
     setValues({
       ...values,
       image: data,
     });
   };
+  const baseUrl = process.env.REACT_APP_BASE_URL;
 
-  const token = localStorage.getItem("token");
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (editMode) {
       axios
-        .put(`https://dummyjson.com/users/1`, values, {
+        .put(`${baseUrl}/users/1`, values, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -55,12 +50,11 @@ const AddStudent = ({
         });
     } else {
       axios
-        .post("https://dummyjson.com/users/add'", values, {
+        .post(`${baseUrl}/users/add`, values, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         })
-
         .then((res) => {
           console.log(res);
         })
@@ -69,8 +63,6 @@ const AddStudent = ({
     setIsOpenModal(false);
     window.location.reload();
   };
-  console.log(values);
-
   useEffect(() => {
     setValues(userToEdit);
   }, [userToEdit]);
@@ -81,7 +73,6 @@ const AddStudent = ({
         <div className={styles.image}>
           <img src={values.image ? values.image : gifImg} alt="click" />
         </div>
-
         <label htmlFor="profileImage">
           <p>Upload</p>
           <input
@@ -92,7 +83,6 @@ const AddStudent = ({
           />
         </label>
       </div>
-
       <form onSubmit={handleSubmit} className={styles.formWrapper}>
         <div className={styles.singleField}>
           <label>First Name</label>

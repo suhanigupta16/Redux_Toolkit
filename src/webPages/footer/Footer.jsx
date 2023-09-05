@@ -17,7 +17,6 @@ const Footer = () => {
           <p>Phone: +345678844</p>
           <p>Address: Big Bazar</p>
         </div>
-
         <div className={styles.footerContent}>
           <h3>Quick Links</h3>
           <ul className={styles.list}>
@@ -26,7 +25,6 @@ const Footer = () => {
             <li>About</li>
           </ul>
         </div>
-
         <div className={styles.footerContent}>
           <h3>Follow Us</h3>
           <ul className={styles.socialIcons}>
